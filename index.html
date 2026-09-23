@@ -3,36 +3,30 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lista de compras</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&display=swap" rel="stylesheet">
+    <title>Lista de compras</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/index.css">
 </head>
+
 <body>
+
     <main class="container">
+
         <h1 class="title">Weekly shopping</h1>
 
         <div class="add-item">
-            <input type="text" placeholder="add a new item">
-            <button type="button" class="input-button">Add item</button>
+            <input type="text" id="input" placeholder="add a new item">
+            <button type="button" id="addButton" class="input-button">Add item</button>
         </div>
 
-        <ul>
-            <div class="item">
-                <input type="checkbox" name="" id="">
-                <li class="item-list">bread</li>
-                <img src="/assets/icon delete.png" class="remove-icon" alt="">
-            </div>
-        </ul>
+        <ul id="shopping-list"></ul>
 
-        <div class="alert">
-            <img src="/assets/warning-circle-filled.png" alt="">
-            <span>item removed from the list</span>
-            <img src="/assets/delete-small.png"  alt="">
-        </div>
     </main>
+    <script src="/js/inde.js"></script>
 </body>
 </html>

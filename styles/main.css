@@ -9,10 +9,8 @@
 
     & .add-item {
         display: flex;
-        
         width: 100%;
         height: 100px;
-
         gap: 16px;
         flex-direction: column;
 
@@ -28,58 +26,81 @@
             }
 
             &:focus {
-                border-color:  var(--color-brand);
+                border-color: var(--color-brand);
                 outline: none;
             }
         }
 
         & .input-button {
             width: 100%;
-            height: 44PX;
+            height: 44px;
             border-radius: 12px;
             border: 1px solid var(--color-brand);
-            background-color: VAR(--color-brand);
+            background-color: var(--color-brand);
             color: var(--always-white);
             font: var(--label);
         }
-
     }
 
+
+    & ul {
+        padding: 0;
+        margin: 0;
+
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+
     & .item {
-        
         display: flex;
         align-items: center;
-        justify-content: space-between;
+
+        gap: 12px;
+
         height: 57px;
+
         border: 1px solid var(--border-primary);
         border-radius: 12px;
+
         padding: 10px;
 
-        & li {
-            list-style: none;
+        list-style: none;
+
+
+        & .item-list {
+            flex: 1;
+
             color: var(--content-primary);
-            font: var(--paragraph)
+            font: var(--paragraph);
         }
-        
+
+        & .checked {
+            text-decoration: line-through;
+            color: var( --content-tertiary)
+        }
+
+
         & input[type="checkbox"] {
             cursor: pointer;
+
             width: 16px;
             height: 16px;
-            border-color: var(--border-primary);
 
-            &:checked {
-                accent-color: var(--color-brand);
-            }
+            accent-color: var(--color-brand);
+
         }
+
 
         & .remove-icon {
             cursor: pointer;
+
             transition: background-color 200ms ease;
             border-radius: 50%;
 
             &:hover {
                 background-color: rgb(247, 166, 166);
-                border-radius: 50%;
             }
         }
     }
