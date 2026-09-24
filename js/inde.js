@@ -2,6 +2,8 @@ const descriptionItem = document.getElementById("input")
 const btnAddItem = document.getElementById("addButton")
 const ul = document.getElementById("shopping-list")
 
+const alertBox = document.querySelector(".alert")
+let alertTimeout
 
 btnAddItem.addEventListener("click", () => {
 
@@ -10,7 +12,6 @@ btnAddItem.addEventListener("click", () => {
     if (item === "") {
         return
     }
-
 
     // cria o li
     const li = document.createElement("li")
@@ -47,7 +48,17 @@ btnAddItem.addEventListener("click", () => {
     // remover item
     imgX.addEventListener("click", () => {
         li.remove()
+
+        alertBox.classList.remove("hide")
+
+        clearTimeout(alertTimeout)
+
+        alertTimeout = setInterval(() => {
+            alertBox.classList.add("hide")
+        }, 2000)
+        
     })
+
 
 
     // coloca tudo dentro do li

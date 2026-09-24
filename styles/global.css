@@ -46,4 +46,10 @@ body {
     background-color: var(--bg-primary);
     padding-inline: 2rem;
     padding-block: 2.875rem;
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    position: relative;
 }
